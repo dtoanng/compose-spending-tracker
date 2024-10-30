@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.samsung.shrc.dtoanng.compose_spending_tracker"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -36,10 +36,11 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.14"
     }
     packaging {
         resources {
@@ -74,6 +75,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.viewmodel.savedstate)
+
+    implementation(libs.androidx.preference)
+    implementation(libs.androidx.datastore)
 
     //square_up
     implementation(libs.retrofit)

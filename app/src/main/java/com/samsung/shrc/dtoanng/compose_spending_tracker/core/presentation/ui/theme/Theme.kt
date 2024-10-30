@@ -1,4 +1,4 @@
-package com.samsung.shrc.dtoanng.compose_spending_tracker.ui.theme
+package com.samsung.shrc.dtoanng.compose_spending_tracker.core.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
