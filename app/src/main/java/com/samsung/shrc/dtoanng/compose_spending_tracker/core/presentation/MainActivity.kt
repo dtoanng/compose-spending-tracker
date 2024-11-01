@@ -19,13 +19,13 @@ import androidx.navigation.compose.rememberNavController
 import com.samsung.shrc.dtoanng.compose_spending_tracker.core.navigation.Screen
 import com.samsung.shrc.dtoanng.compose_spending_tracker.core.presentation.ui.theme.ComposespendingtrackerTheme
 import com.samsung.shrc.dtoanng.compose_spending_tracker.core.presentation.util.Background
+import com.samsung.shrc.dtoanng.compose_spending_tracker.spending_details.presentation.SpendingDetailsScreen
 import com.samsung.shrc.dtoanng.compose_spending_tracker.spendingoverview.presentation.SpendingOverviewScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge(
-        )
+        enableEdgeToEdge()
         setContent {
             ComposespendingtrackerTheme {
                 Navigation(modifier = Modifier.fillMaxSize())
@@ -51,14 +51,16 @@ class MainActivity : ComponentActivity() {
             composable<Screen.SpendingOverview> {
                 SpendingOverviewScreen(
                     onBalanceClick = { navController.navigate(Screen.Balance) },
-                    onAddSpendingClick = { navController.navigate(Screen.SpendingDetails) }
+                    onAddSpendingClick = { navController.navigate(Screen.SpendingDetails(-1)) }
                 )
             }
 
             composable<Screen.SpendingDetails> {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text(text = "Spending Details Screen")
-                }
+                SpendingDetailsScreen(
+                    onSaveSpending = {
+                        navController.popBackStack()
+                    }
+                )
             }
 
             composable<Screen.Balance> {

@@ -46,165 +46,9 @@ class SpendingOverviewViewModel(
                 dateList = allDates.reversed()
             )
 
-            val dummy  = listOf(
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-                Spending(
-                    price = 23.3,
-                    name = "name",
-                    kilograms = 24.4,
-                    dateTimeUtc = ZonedDateTime.now(),
-                    color = randomColor(),
-                    quantity = 34.3,
-                    spendingId = null
-                ),
-            )
-
-            state = state.copy(
-                spendingList = dummy
-            )
+//            state = state.copy(
+//                spendingList = dummy
+//            )
         }
     }
 
@@ -213,3 +57,159 @@ class SpendingOverviewViewModel(
     }
 
 }
+
+val dummy  = listOf(
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+    Spending(
+        price = 23.3,
+        name = "name",
+        kilograms = 24.4,
+        dateTimeUtc = ZonedDateTime.now(),
+        color = randomColor(),
+        quantity = 34.3,
+        spendingId = null
+    ),
+)

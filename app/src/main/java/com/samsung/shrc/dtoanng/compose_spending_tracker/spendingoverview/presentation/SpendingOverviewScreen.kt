@@ -32,6 +32,7 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -84,7 +85,7 @@ fun SpendingOverviewScreen(
     LaunchedEffect(key1 = true) {
         viewModel.onAction(SpendingOverviewAction.LoadSpendingOverviewAndBalance)
     }
-    //todo
+
     SpendingViews(
         state = viewModel.state,
         onAction = viewModel::onAction,
@@ -377,30 +378,53 @@ fun DatePickerDropdownMenu(
             expanded = isExpanded,
             onDismissRequest = { isExpanded = false },
             offset = DpOffset(10.dp, 0.dp),
-            modifier = Modifier.heightIn(max = 44.dp)
+            modifier = Modifier.heightIn(max = 440.dp)
         ) {
 
-            Row(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(16.dp))
-                    .background(MaterialTheme.colorScheme.surfaceVariant)
-                    .clickable { isExpanded = true }
-                    .padding(horizontal = 16.dp, vertical = 12.dp)
-            ) {
+            state.dateList.forEachIndexed { index, zonedDateTime ->
+
+                if (index == 0) {
+                    HorizontalDivider()
+                }
 
                 Text(
-                    text = state.pickedDate.formatDate(),
-                    style = TextStyle(
-                        fontSize = 20.sp,
-                        fontWeight = FontWeight.Normal
-                    )
+                    text = zonedDateTime.formatDate(),
+                    color = MaterialTheme.colorScheme.onSecondaryContainer,
+                    fontWeight = FontWeight.Normal,
+                    modifier = Modifier
+                        .padding(15.dp)
+                        .align(Alignment.CenterHorizontally)
+                        .clickable {
+                            isExpanded = false
+                            onItemClick(index)
+                        }
                 )
 
-                Spacer(modifier = Modifier.width(8.dp))
-
-                Icon(imageVector = Icons.Rounded.KeyboardArrowDown, contentDescription = "Pick a date")
-
+                HorizontalDivider()
             }
+
+        }
+
+        Row(
+            modifier = Modifier
+                .clip(RoundedCornerShape(15.dp))
+                .background(MaterialTheme.colorScheme.surfaceVariant)
+                .clickable { isExpanded = true }
+                .padding(horizontal = 15.dp, vertical = 12.dp)
+        ) {
+
+            Text(
+                text = state.pickedDate.formatDate(),
+                style = TextStyle(
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Normal
+                )
+            )
+
+            Spacer(modifier = Modifier.width(8.dp))
+
+            Icon(imageVector = Icons.Rounded.KeyboardArrowDown, contentDescription = "Pick a date")
+
         }
     }
 }
